@@ -80,3 +80,9 @@ class TestFibonacci:
 
     def test_fib_large_number(self):
         assert fibonacci(100) == 354224848179261915075
+
+
+class TestIntersection:
+    def test_intersection(self):
+        assert intersection(2, 1, 3, 1) == (0, 1)
+        assert intersection(-3, 3, (1 / 5), 3) == (0, 3)
