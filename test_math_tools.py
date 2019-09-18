@@ -44,13 +44,15 @@ class TestFactorial:
         with pytest.raises(ValueError):
             factorial(-1)
 
-    def test_factorial_0(self):
+    def test_factorial_base(self):
         assert factorial(0) == 1
 
-    def test_factorial_1(self):
+    def test_factorial_none_base_values(self):
         assert factorial(1) == 1
-
-    def test_factorial_6(self):
+        assert factorial(2) == 2
+        assert factorial(3) == 6
+        assert factorial(4) == 24
+        assert factorial(5) == 120
         assert factorial(6) == 720
 
 
