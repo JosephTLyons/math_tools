@@ -44,14 +44,14 @@ def fibonacci(n):
     if n < 2:
         return n
 
-    total = 1
-    next = 1
-    last = 1
+    total = 0
+    previous_one = 1
+    previous_two = 0
 
-    while (n > 2):
-        total = next + last
-        last = next
-        next = total
+    while n >= 2:
+        total = previous_one + previous_two
+        previous_two = previous_one
+        previous_one = total
         n -= 1
 
     return total
