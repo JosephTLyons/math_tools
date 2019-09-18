@@ -75,3 +75,6 @@ class TestFibonacci:
         assert fibonacci(8) == 21
         assert fibonacci(9) == 34
         assert fibonacci(10) == 55
+
+    def test_fib_large_number(self):
+        assert fibonacci(100) == 354224848179261915075
