@@ -83,6 +83,10 @@ class TestFibonacci:
 
 
 class TestIntersection:
-    def test_intersection(self):
+    def test_for_intersection(self):
         assert intersection(2, 1, 3, 1) == (0, 1)
         assert intersection(-3, 3, (1 / 5), 3) == (0, 3)
+
+    def test_for_no_intersection(self):
+        with pytest.raises(ValueError):
+            intersection(0, 1, 0, 2)

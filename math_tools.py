@@ -25,6 +25,12 @@ def quadratic(a, b, c):
 
 
 def intersection(a_1, b_1, a_2, b_2):
+    if a_1 == a_2:
+        if b_1 == b_2:
+            raise ValueError("Lines are equal")
+
+        else:
+            raise ValueError("The lines do not intersect")
     x = (b_2 - b_1) / (a_1 - a_2)
     y = (a_1 * x) + b_1
     return (x, y)
