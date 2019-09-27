@@ -59,7 +59,7 @@ class TestFactorial:
 class TestFibonacci:
     def test_fib_neg_value(self):
         with pytest.raises(ValueError):
-            factorial(-1)
+            fibonacci(-1)
 
     def test_fib_base_0(self):
         assert fibonacci(0) == 0
