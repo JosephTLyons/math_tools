@@ -90,3 +90,29 @@ class TestIntersection:
     def test_for_no_intersection(self):
         with pytest.raises(ValueError):
             intersection(0, 1, 0, 2)
+
+
+class TestEuclidsGCD:
+    def test_euclid(self):
+        assert euclids_gcd(4, 12) == 4
+        assert euclids_gcd(6, 12) == 6
+        assert euclids_gcd(3, 12) == 3
+
+
+class TestEuclidsGCD:
+    def test_gcd_of_1(self):
+        assert euclids_gcd(1, 4) == 1
+
+    def test_standard_euclid(self):
+        assert euclids_gcd(4, 12) == 4
+        assert euclids_gcd(6, 12) == 6
+        assert euclids_gcd(3, 12) == 3
+
+
+class TestReduceFraction:
+    def test_no_reduction(self):
+        assert reduce_fraction(1, 4) == (1, 4)
+
+
+    def test_reduce_fraction(self):
+        assert reduce_fraction(9, 12) == (3, 4)
