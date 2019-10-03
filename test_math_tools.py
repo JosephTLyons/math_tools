@@ -113,6 +113,5 @@ class TestReduceFraction:
     def test_no_reduction(self):
         assert reduce_fraction(1, 4) == (1, 4)
 
-
     def test_reduce_fraction(self):
         assert reduce_fraction(9, 12) == (3, 4)
