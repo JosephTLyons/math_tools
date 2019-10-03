@@ -34,6 +34,7 @@ def intersection(a_1, b_1, a_2, b_2):
 
     x = (b_2 - b_1) / (a_1 - a_2)
     y = (a_1 * x) + b_1
+
     return (x, y)
 
 
