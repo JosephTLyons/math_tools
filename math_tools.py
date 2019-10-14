@@ -85,6 +85,10 @@ def euclids_gcd(a, b):
     return a
 
 
+def are_coprimes(a, b):
+    return euclids_gcd(a, b) == 1
+
+
 def reduce_fraction(a, b):
     gcd = euclids_gcd(a, b)
     return (a / gcd, b / gcd)

@@ -115,3 +115,9 @@ class TestReduceFraction:
 
     def test_reduce_fraction(self):
         assert reduce_fraction(9, 12) == (3, 4)
+
+
+class TestAreCoprimes:
+    def test_are_coprimes(self):
+        assert not are_coprimes(3, 9)
+        assert are_coprimes(11, 18)
