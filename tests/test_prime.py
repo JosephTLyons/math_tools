@@ -25,7 +25,7 @@ class TestGetPrimeFactors:
     def test_non_prime_numbers_for_input(self):
         assert prime.get_prime_factors(4) == [2, 2]
         assert prime.get_prime_factors(12) == [2, 2, 3]
-        assert prime.get_prime_factors(5 * 6 * 7 * 8 * 9) == [2, 2, 2, 2, 3, 3, 3, 5, 7]
+        assert prime.get_prime_factors(5 * 6 * 7 * 8) == [2, 2, 2, 2, 3, 5, 7]
         assert prime.get_prime_factors(1024) == ([2] * 10)
 
 
