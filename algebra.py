@@ -1,7 +1,5 @@
 import math
 
-from math_tools import *
-
 
 def quadratic(a, b, c):
     if a == 0:

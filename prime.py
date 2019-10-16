@@ -1,6 +1,6 @@
 import math
 
-from fraction import euclids_gcd
+from number_theory import euclids_gcd
 
 
 def is_prime(n):
