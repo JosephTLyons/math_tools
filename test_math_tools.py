@@ -143,3 +143,17 @@ class TestGetPrimeFactors:
         assert get_prime_factors(12) == [2, 2, 3]
         assert get_prime_factors(5 * 6 * 7 * 8 * 9) == [2, 2, 2, 2, 3, 3, 3, 5, 7]
         assert get_prime_factors(1024) == ([2] * 10)
+
+
+class TestIsPrime:
+    def test_primes(self):
+        assert is_prime(3)
+        assert is_prime(7)
+        assert is_prime(11)
+        assert is_prime(23)
+
+    def test_non_primes(self):
+        assert not is_prime(4)
+        assert not is_prime(6)
+        assert not is_prime(12)
+        assert not is_prime(14)

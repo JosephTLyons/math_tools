@@ -122,4 +122,10 @@ def get_prime_factors(x):
     return prime_list
 
 
-# def is_prime(n):
+def is_prime(n):
+    return get_first_prime_factor(n) is None
+
+
+# def get_primes_up_to(n):
+# using sieve
+# algorithm to get first x amount of primes
