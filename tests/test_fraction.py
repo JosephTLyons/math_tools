@@ -1,12 +1,27 @@
 import pytest
 
-import fraction
+from fraction import Fraction
 
 
 class TestReduceFraction:
     def test_no_reduction(self):
-        assert fraction.reduce_fraction(1, 4) == (1, 4)
+        fraction = Fraction(1, 4)
+        fraction.reduce()
+        print(fraction)
+        assert fraction.get_fraction_tuple() == (1, 4)
 
     def test_reduce_fraction(self):
-        assert fraction.reduce_fraction(9, 12) == (3, 4)
-        assert fraction.reduce_fraction(8, 64) == (1, 8)
+        fraction = Fraction(9, 12)
+        fraction.reduce()
+        assert fraction.get_fraction_tuple() == (3, 4)
+
+        fraction = Fraction(8, 64)
+        fraction.reduce()
+        assert fraction.get_fraction_tuple() == (1, 8)
+
+    def test_add_fraction(self):
+        fraction_1 = Fraction(3, 4)
+        fraction_2 = Fraction(5, 6)
+        result = fraction_1.add(fraction_2)
+        tuple_1 = result.get_fraction_tuple()
+        assert tuple_1 == (19, 12)
