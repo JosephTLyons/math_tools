@@ -22,9 +22,4 @@ def lcm(a, b):
     elif b % a == 0:
         return b
 
-    i = 1
-
-    while (a * i) % b != 0:
-        i += 1
-
-    return a * i
+    return (a * b) / euclids_gcd(a, b)
