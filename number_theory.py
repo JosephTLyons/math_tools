@@ -27,4 +27,4 @@ def lcm(a, b):
     while (a * i) % b != 0:
         i += 1
 
-    return a * b
+    return a * i

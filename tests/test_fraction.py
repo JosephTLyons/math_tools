@@ -23,5 +23,4 @@ class TestReduceFraction:
         fraction_1 = Fraction(3, 4)
         fraction_2 = Fraction(5, 6)
         result = fraction_1.add(fraction_2)
-        tuple_1 = result.get_fraction_tuple()
-        assert tuple_1 == (19, 12)
+        assert result.get_fraction_tuple() == (19, 12)
