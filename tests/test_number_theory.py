@@ -31,3 +31,6 @@ class TestLCM:
         assert number_theory.lcm(4, 6) == 12
         assert number_theory.lcm(3, 5) == 15
         assert number_theory.lcm(8, 20) == 40
+
+    def test_lcm_of_large_two_primes(self):
+        assert number_theory.lcm(1013, 4297) == 4_352_861
