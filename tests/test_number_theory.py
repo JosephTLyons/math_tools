@@ -15,3 +15,19 @@ class TestEuclidsGCD:
         assert number_theory.euclids_gcd(6, 12) == 6
         assert number_theory.euclids_gcd(3, 12) == 3
         assert number_theory.euclids_gcd(9, 21) == 3
+
+
+class TestLCM:
+    def test_lcm_same(self):
+        assert number_theory.lcm(1, 1) == 1
+
+    def test_lcm_a_multiple_b(self):
+        assert number_theory.lcm(9, 3) == 9
+
+    def test_lcm_b_multiple_b(self):
+        assert number_theory.lcm(3, 9) == 9
+
+    def test_lcm_normal(self):
+        assert number_theory.lcm(4, 6) == 12
+        assert number_theory.lcm(3, 5) == 15
+        assert number_theory.lcm(8, 20) == 40
