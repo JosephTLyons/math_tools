@@ -34,3 +34,6 @@ class Fraction:
         new_fraction.reduce()
 
         return new_fraction
+
+    def divide(self, other_fraction):
+        return self.multiply(Fraction(other_fraction.denominator, other_fraction.numerator))

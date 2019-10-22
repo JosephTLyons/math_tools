@@ -29,3 +29,6 @@ class TestFractionOperations:
 
     def test_multiply_fraction(self):
         assert (Fraction(3, 4).multiply(Fraction(5, 6))).get_fraction_tuple() == (5, 8)
+
+    def test_divide_fraction(self):
+        assert (Fraction(3, 4).divide(Fraction(5, 6))).get_fraction_tuple() == (9, 10)
