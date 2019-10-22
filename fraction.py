@@ -25,3 +25,12 @@ class Fraction:
     def subtract(self, other_fraction):
         other_fraction.numerator *= -1
         return self.add(other_fraction)
+
+    def multiply(self, other_fraction):
+        new_numerator = self.numerator * other_fraction.numerator
+        new_demoninator = self.denominator * other_fraction.denominator
+
+        new_fraction = Fraction(new_numerator, new_demoninator)
+        new_fraction.reduce()
+
+        return new_fraction
