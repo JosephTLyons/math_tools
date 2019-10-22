@@ -16,11 +16,11 @@ class Fraction:
 
     def add(self, other_fraction):
         new_denom = number_theory.lcm(self.denominator, other_fraction.denominator)
+
         partial_num_1 = (new_denom // self.denominator) * self.numerator
         partial_num_2 = (new_denom // other_fraction.denominator) * other_fraction.numerator
-        new_num = partial_num_1 + partial_num_2
-        new_fraction = Fraction(new_num, new_denom)
-        return new_fraction
+
+        return Fraction(partial_num_1 + partial_num_2, new_denom)
 
     def subtract(self, other_fraction):
         other_fraction.numerator *= -1
