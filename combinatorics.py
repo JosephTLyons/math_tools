@@ -18,6 +18,7 @@ def ncr(n, r):
 
     numerator = factorial(n)
     denominator = factorial(r) * factorial(n - r)
+
     return numerator // denominator
 
 
