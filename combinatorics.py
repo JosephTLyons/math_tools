@@ -13,6 +13,9 @@ def factorial(n):
 
 # n = objects, r = sample
 def ncr(n, r):
+    if r == 0:
+        return 1
+
     numerator = factorial(n)
     denominator = factorial(r) * factorial(n - r)
     return numerator // denominator

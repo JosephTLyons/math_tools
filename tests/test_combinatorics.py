@@ -21,6 +21,9 @@ class TestFactorial:
 
 
 class TestNCR:
-    def test_ncr(self):
+    def test_zero_ncr(self):
+        assert combinatorics.ncr(20, 0) == 1
+
+    def test_normal_ncr(self):
         assert combinatorics.ncr(4, 3) == 4
         assert combinatorics.ncr(8, 3) == 56
