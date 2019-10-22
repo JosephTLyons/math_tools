@@ -20,10 +20,34 @@ class TestFactorial:
         assert combinatorics.factorial(6) == 720
 
 
+class TestFactorialDivision:
+    def test_factorial_division(self):
+        assert combinatorics.factorial_division(10, 8) == 90
+        assert combinatorics.factorial_division(20, 19) == 20
+
+
 class TestNCR:
+    def test_negative_ncr_values(self):
+        with pytest.raises(ValueError):
+            combinatorics.ncr(-1, 3)
+
     def test_zero_ncr(self):
         assert combinatorics.ncr(20, 0) == 1
 
     def test_normal_ncr(self):
         assert combinatorics.ncr(4, 3) == 4
         assert combinatorics.ncr(8, 3) == 56
+
+
+class TestNPR:
+    def test_negative_npr_values(self):
+        with pytest.raises(ValueError):
+            combinatorics.npr(-1, 3)
+
+    def test_zero_npr(self):
+        assert combinatorics.npr(20, 0) == 1
+
+    def test_normal_npr(self):
+        assert combinatorics.npr(5, 2) == 20
+        assert combinatorics.npr(10, 4) == 5040
+        assert combinatorics.npr(10, 8) == 1814400
