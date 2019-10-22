@@ -18,3 +18,9 @@ class TestFactorial:
         assert combinatorics.factorial(4) == 24
         assert combinatorics.factorial(5) == 120
         assert combinatorics.factorial(6) == 720
+
+
+class TestNCR:
+    def test_ncr(self):
+        assert combinatorics.ncr(4, 3) == 4
+        assert combinatorics.ncr(8, 3) == 56
