@@ -22,13 +22,7 @@ class TestReduceFraction:
 
 class TestFractionOperations:
     def test_add_fraction(self):
-        fraction_1 = Fraction(3, 4)
-        fraction_2 = Fraction(5, 6)
-        result = fraction_1.add(fraction_2)
-        assert result.get_fraction_tuple() == (19, 12)
+        assert (Fraction(3, 4).add(Fraction(5, 6))).get_fraction_tuple() == (19, 12)
 
     def test_subtract_fraction(self):
-        fraction_1 = Fraction(3, 4)
-        fraction_2 = Fraction(5, 6)
-        result = fraction_1.subtract(fraction_2)
-        assert result.get_fraction_tuple() == (-1, 12)
+        assert (Fraction(3, 4).subtract(Fraction(5, 6))).get_fraction_tuple() == (-1, 12)
