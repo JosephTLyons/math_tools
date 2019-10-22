@@ -21,6 +21,14 @@ class TestFactorial:
 
 
 class TestFactorialDivision:
+    def test_negative_numerator(self):
+        with pytest.raises(ValueError):
+            combinatorics.factorial_division(-10, 2)
+
+    def test_negative_demonimator(self):
+        with pytest.raises(ValueError):
+            combinatorics.factorial_division(10, -2)
+
     def test_factorial_division(self):
         assert combinatorics.factorial_division(10, 8) == 90
         assert combinatorics.factorial_division(20, 19) == 20
