@@ -21,3 +21,7 @@ class Fraction:
         new_num = partial_num_1 + partial_num_2
         new_fraction = Fraction(new_num, new_denom)
         return new_fraction
+
+    def subtract(self, other_fraction):
+        other_fraction.numerator *= -1
+        return self.add(other_fraction)
