@@ -1,8 +1,8 @@
 def euclids_gcd(a, b):
-    remainder = 1
-
     if a == b:
         return a
+
+    remainder = 1
 
     while remainder != 0:
         remainder = a % b
