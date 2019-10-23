@@ -1,6 +1,10 @@
 import math
 
 
+def get_x_intercepts_of_line(a, b):
+    return (-b / a)
+
+
 def quadratic(a, b, c):
     if a == 0:
         raise ValueError("Not a quadratic function")
