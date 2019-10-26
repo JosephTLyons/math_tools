@@ -14,7 +14,7 @@ class Fraction:
     def get_fraction_tuple(self):
         return (self.numerator, self.denominator)
 
-    def add(self, other_fraction):
+    def __add__(self, other_fraction):
         new_denom = number_theory.lcm(self.denominator, other_fraction.denominator)
 
         partial_num_1 = (new_denom // self.denominator) * self.numerator
@@ -22,11 +22,11 @@ class Fraction:
 
         return Fraction(partial_num_1 + partial_num_2, new_denom)
 
-    def subtract(self, other_fraction):
+    def __sub__(self, other_fraction):
         other_fraction.numerator *= -1
-        return self.add(other_fraction)
+        return self.__add__(other_fraction)
 
-    def multiply(self, other_fraction):
+    def __mul__(self, other_fraction):
         new_numerator = self.numerator * other_fraction.numerator
         new_demoninator = self.denominator * other_fraction.denominator
 
@@ -35,5 +35,5 @@ class Fraction:
 
         return new_fraction
 
-    def divide(self, other_fraction):
-        return self.multiply(Fraction(other_fraction.denominator, other_fraction.numerator))
+    def __truediv__(self, other_fraction):
+        return self.__mul__(Fraction(other_fraction.denominator, other_fraction.numerator))
