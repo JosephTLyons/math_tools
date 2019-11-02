@@ -11,9 +11,6 @@ class Fraction:
         self.numerator //= gcd
         self.denominator //= gcd
 
-    def get_fraction_tuple(self):
-        return (self.numerator, self.denominator)
-
     def __add__(self, other_fraction):
         new_denom = number_theory.lcm(self.denominator, other_fraction.denominator)
 
@@ -37,3 +34,6 @@ class Fraction:
 
     def __truediv__(self, other_fraction):
         return self.__mul__(Fraction(other_fraction.denominator, other_fraction.numerator))
+
+    def __eq__(self, other_fraction):
+        return self.numerator == other_fraction.numerator and self.denominator == other_fraction.denominator
