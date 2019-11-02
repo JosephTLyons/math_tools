@@ -7,7 +7,6 @@ class TestReduceFraction:
     def test_no_reduction(self):
         fraction = Fraction(1, 4)
         fraction.reduce()
-        print(fraction)
         assert fraction.get_fraction_tuple() == (1, 4)
 
     def test_reduce_fraction(self):
