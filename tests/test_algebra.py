@@ -5,11 +5,11 @@ import algebra
 
 class TestGetXInterceptsOfLine:
     def test_get_x_intercepts_of_line_zero(self):
-        assert algebra.get_x_intercepts_of_line(5, 0) == 0
+        assert algebra.get_x_intercept_of_line(5, 0) == 0
 
     def test_get_x_intercepts_of_line_non_zero(self):
-        assert algebra.get_x_intercepts_of_line(5, 1) == (-1 / 5)
-        assert algebra.get_x_intercepts_of_line(10, 3) == (-3 / 10)
+        assert algebra.get_x_intercept_of_line(5, 1) == (-1 / 5)
+        assert algebra.get_x_intercept_of_line(10, 3) == (-3 / 10)
 
 
 class TestQuadratic:

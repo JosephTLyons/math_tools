@@ -1,7 +1,7 @@
 import math
 
 
-def get_x_intercepts_of_line(a, b):
+def get_x_intercept_of_line(a, b):
     return (-b / a)
 
 
