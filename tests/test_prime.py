@@ -41,3 +41,17 @@ class TestIsPrime:
         assert not prime.is_prime(6)
         assert not prime.is_prime(12)
         assert not prime.is_prime(14)
+
+
+class TestGetPrimeNumbersUpTo:
+    def test_get_prime_numbers_up_to_zero(self):
+        assert [] == prime.get_prime_numbers_up_to(0)
+
+    def test_get_prime_numbers_up_to_5(self):
+        assert [2, 3, 5] == prime.get_prime_numbers_up_to(5)
+
+    def test_get_prime_numbers_up_to_10(self):
+        assert [2, 3, 5, 7] == prime.get_prime_numbers_up_to(10)
+
+    def test_get_prime_numbers_up_to_40(self):
+        assert [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37] == prime.get_prime_numbers_up_to(40)

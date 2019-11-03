@@ -39,6 +39,26 @@ def get_prime_factors(x):
     return prime_list
 
 
-# def get_primes_up_to(n):
-# using sieve
-# algorithm to get first x amount of primes
+def get_prime_numbers_up_to(n):
+    if n <= 1:
+        return []
+
+    sieve_bool_list = [True] * n
+    sieve_bool_list[0] = False
+
+    upper_bound = int(math.sqrt(n))
+
+    for i in range(2, upper_bound + 1):
+        while not sieve_bool_list[i - 1]:
+            i += 1
+
+            if i >= n:
+                break
+
+        j = i
+
+        while j * i <= n:
+            sieve_bool_list[(j * i) - 1] = False
+            j += 1
+
+    return [index + 1 for index, is_prime in enumerate(sieve_bool_list) if sieve_bool_list[index]]
