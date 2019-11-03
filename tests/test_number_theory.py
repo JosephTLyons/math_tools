@@ -34,3 +34,18 @@ class TestLCM:
 
     def test_lcm_of_large_two_primes(self):
         assert number_theory.lcm(1013, 4297) == 4_352_861
+
+
+class TestMod:
+    def test_mod_zero(self):
+        assert number_theory.mod(8, 2) == 0
+
+    def test_mod_positive(self):
+        assert number_theory.mod(5, 3) == 2
+        assert number_theory.mod(15, 7) == 1
+        assert number_theory.mod(10, 3) == 1
+
+    def test_mod_negative(self):
+        assert number_theory.mod(3, -2) == -1
+        assert number_theory.mod(-3, 2) == 1
+        assert number_theory.mod(-3, -2) == -1

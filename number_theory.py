@@ -23,3 +23,7 @@ def lcm(a, b):
         return b
 
     return (a * b) / euclids_gcd(a, b)
+
+
+def mod(a, b):
+    return a - ((a // b) * b)
