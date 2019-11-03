@@ -3,7 +3,7 @@ def factorial(n):
 
 
 # This function can be called when you have (numerator! / denominator!)
-# and is more efficient than computing the factorials first then dividing
+# and is more efficient than computing the factorials individually prior to dividing
 def factorial_division(numerator, denominator):
     if numerator < 0 or denominator < 0:
         raise ValueError("Factorial is not defined for negative numbers")
