@@ -61,4 +61,4 @@ def get_prime_numbers_up_to(n):
             sieve_bool_list[(j * i) - 1] = False
             j += 1
 
-    return [index + 1 for index, is_prime in enumerate(sieve_bool_list) if sieve_bool_list[index]]
+    return [index + 1 for index, is_prime in enumerate(sieve_bool_list) if is_prime]
