@@ -1,8 +1,26 @@
 import math
 
 
-def get_x_intercept_of_line(a, b):
-    return (-b / a)
+class Line:
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
+
+    def get_x_intercept_of_line(self):
+        return (-self.b / self.a)
+
+    def intersection(self, other_line):
+        if self.a == other_line.a:
+            if self.b == other_line.b:
+                raise ValueError("Lines are equal")
+
+            else:
+                raise ValueError("The lines do not intersect")
+
+        x = (other_line.b - self.b) / (self.a - other_line.a)
+        y = (self.a * x) + self.b
+
+        return (x, y)
 
 
 def quadratic(a, b, c):
@@ -24,17 +42,3 @@ def quadratic(a, b, c):
         return [x_1]
 
     return sorted([x_1, x_2])
-
-
-def intersection(a_1, b_1, a_2, b_2):
-    if a_1 == a_2:
-        if b_1 == b_2:
-            raise ValueError("Lines are equal")
-
-        else:
-            raise ValueError("The lines do not intersect")
-
-    x = (b_2 - b_1) / (a_1 - a_2)
-    y = (a_1 * x) + b_1
-
-    return (x, y)

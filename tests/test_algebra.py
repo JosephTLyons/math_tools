@@ -3,13 +3,21 @@ import pytest
 import algebra
 
 
-class TestGetXInterceptsOfLine:
+class TestIntersection:
+    def test_for_intersection(self):
+        assert algebra.Line(2, 1).intersection(algebra.Line(3, 1)) == (0, 1)
+        assert algebra.Line(-3, 3).intersection(algebra.Line((1 / 5), 3)) == (0, 3)
+
+    def test_for_no_intersection(self):
+        with pytest.raises(ValueError):
+            algebra.Line(0, 1).intersection(algebra.Line(0, 2))
+
     def test_get_x_intercepts_of_line_zero(self):
-        assert algebra.get_x_intercept_of_line(5, 0) == 0
+        assert algebra.Line(5, 0).get_x_intercept_of_line() == 0
 
     def test_get_x_intercepts_of_line_non_zero(self):
-        assert algebra.get_x_intercept_of_line(5, 1) == (-1 / 5)
-        assert algebra.get_x_intercept_of_line(10, 3) == (-3 / 10)
+        assert algebra.Line(5, 1).get_x_intercept_of_line() == (-1 / 5)
+        assert algebra.Line(10, 3).get_x_intercept_of_line() == (-3 / 10)
 
 
 class TestQuadratic:
@@ -45,13 +53,3 @@ class TestQuadratic:
         # 0x^2 + 1x + 0 : isn't a quadratic
         with pytest.raises(ValueError):
             algebra.quadratic(0, 1, 0)
-
-
-class TestIntersection:
-    def test_for_intersection(self):
-        assert algebra.intersection(2, 1, 3, 1) == (0, 1)
-        assert algebra.intersection(-3, 3, (1 / 5), 3) == (0, 3)
-
-    def test_for_no_intersection(self):
-        with pytest.raises(ValueError):
-            algebra.intersection(0, 1, 0, 2)
