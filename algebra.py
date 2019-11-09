@@ -2,23 +2,23 @@ import math
 
 
 class Line:
-    def __init__(self, a, b):
-        self.a = a
-        self.b = b
+    def __init__(self, slope, y):
+        self.slope = slope
+        self.y = y
 
     def get_x_intercept_of_line(self):
-        return (-self.b / self.a)
+        return (-self.y / self.slope)
 
     def intersection(self, other_line):
-        if self.a == other_line.a:
-            if self.b == other_line.b:
+        if self.slope == other_line.slope:
+            if self.y == other_line.y:
                 raise ValueError("Lines are equal")
 
             else:
                 raise ValueError("The lines do not intersect")
 
-        x = (other_line.b - self.b) / (self.a - other_line.a)
-        y = (self.a * x) + self.b
+        x = (other_line.y - self.y) / (self.slope - other_line.slope)
+        y = (self.slope * x) + self.y
 
         return (x, y)
 
