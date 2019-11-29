@@ -37,3 +37,6 @@ class Fraction:
 
     def __eq__(self, other_fraction):
         return self.numerator == other_fraction.numerator and self.denominator == other_fraction.denominator
+
+    def evaluate(self):
+        return self.numerator / self.denominator

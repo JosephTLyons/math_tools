@@ -31,3 +31,14 @@ class TestFractionOperations:
 
     def test_divide_fraction(self):
         assert Fraction(3, 4) / Fraction(5, 6) == Fraction(9, 10)
+
+
+class TestEvaluate:
+    def test_evaulate_3_4(self):
+        assert Fraction(3, 4).evaluate() == 0.75
+
+    def test_evaulate_4_5(self):
+        assert Fraction(4, 5).evaluate() == 0.80
+
+    def test_evaulate_1_3(self):
+        assert Fraction(1, 3).evaluate() == pytest.approx(0.33, 0.1)
